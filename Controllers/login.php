@@ -31,26 +31,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
             
            if ($user['prio'] == 1) {
 
-            header("Location:../Controllers/admin/home.php");
+            header("Location:adminPage");
                echo "the user is logged in ";
                
            }
            if ($user['prio'] == 2) {
 
-            header("Location:../Controllers/receptionist/home.php");
+            header("Location:receptionistPage");
                echo "the user is logged in ";
                
            }
            if ($user['prio'] == 3) {
 
-            header("Location:../Controllers/doctor/home.php");
+            header("Location:doctorPage");
                echo "the user is logged in ";
 
                
            }
            if ($user['prio'] == 4) {
 
-            header("Location:../Controllers/patient/home.php");
+            header("Location:patientPage");
                echo "the user is logged in ";
 
                

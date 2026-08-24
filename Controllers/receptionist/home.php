@@ -11,4 +11,4 @@ $pageName = "receptionist page";
 
 
 
-require '../../Views/Pages/receptionistPages/home.view.php';
+require 'Views/Pages/receptionistPages/home.view.php';

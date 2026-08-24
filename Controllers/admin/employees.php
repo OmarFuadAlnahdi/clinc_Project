@@ -1,12 +1,11 @@
 <?php
 
 
-require_once '../../database.php';
-require '../../functions.php';
+
 
 
 $PageName = "Employees Displayer";
-$pagePath = "../admin/employees.php";
+
 
 $stmt = new database();
 
@@ -19,7 +18,7 @@ $usersResult = $stmt->query("SELECT * FROM users");
 $usersResult->execute();
 $users = $usersResult->fetchAll(PDO::FETCH_ASSOC);
 
-// fitching the users table
+// fetching the users table
 
 
 //creating the vars down below

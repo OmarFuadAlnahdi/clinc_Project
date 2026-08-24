@@ -71,7 +71,7 @@ require 'partials/header.php';
 
          <a href="#"><?= $PageName ?></a>
 
-         <a href="../../../index.php">Log out</a>
+         <a href="/">Log out</a>
 
 
 

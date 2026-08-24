@@ -9,9 +9,8 @@
 <body>
     
 
-    <h1>Welcome to the <?= $pageName ?></h1>
-    <a href="../../../index.php">log out</a>
-
+    <a href="/"><h1>Home</h1></a>
+    
 
 
 </body>
