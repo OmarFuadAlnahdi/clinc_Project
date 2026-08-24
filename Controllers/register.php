@@ -1,12 +1,10 @@
 <?php
 
 
+$db = new database();
 
 
 $PageName = "Register";
-
-
-$db =  new database();
 
 
 $error = "";
@@ -37,7 +35,7 @@ if (isDatafilled($data))
 
         if ($result) {
             $error = "All good!";
-            header("Location:login.php");
+            header("Location:login");
         } 
     }
     else{

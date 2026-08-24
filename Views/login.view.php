@@ -98,15 +98,12 @@
 </style>
 <body>
 
-<div>
-    <h1>hello</h1>
-</div>
     <div class="container" id="container">
         <div class="form-container sign-in-container">
 
-            <form action="../Controllers/login.php" method = "post">
+            <form action="/login" method = "post">
 
-                <h1>sign in</h1>
+                <h1><?= $pageName ?> </h1>
                 <input type="email" placeholder="email" name="email">
                 <input type="password" placeholder="password" name="password">
                 <a href="#">Forgot your password?</a>

@@ -21,8 +21,8 @@
         <div class="items">
             <a class="item" href="/">Home</a>
             <a class="item" href="/register">Register</a>
-            <a class="item" href="#">Login</a>
-            <a class="item" href="#">About us</a>
+            <a class="item" href="/login">Login</a>
+            <a class="item" href="/login">About us</a>
 
         </div>
 

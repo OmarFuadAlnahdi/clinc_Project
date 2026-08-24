@@ -1,21 +1,19 @@
 <?php 
 
-require_once '../database.php';
-require_once '../functions.php';
-$PDO = new database();
 
-$errorMessages = "";
+$error = "";
 
 
-$pageName = "login page";
+$pageName = "Log in";
 
+$db = new database();
 
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") 
 {
 
-    $stmt = $PDO->query("SELECT * FROM users WHERE email = :email");
+    $stmt = $db->query("SELECT * FROM users WHERE email = :email");
     $stmt->execute([
         ':email' => $_POST['email']
     ]);
@@ -75,4 +73,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 
 
 
-require '../Views/login.view.php';
+require 'Views/login.view.php';

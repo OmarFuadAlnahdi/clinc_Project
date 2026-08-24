@@ -8,11 +8,14 @@ $router = [
     
     '/' => 'Views/index.view.php',
     '/register' => 'Controllers/register.php',
+    '/login' => 'Controllers/login.php',
 
 ];
 
 $ProjectName = "Scoppa HIT";
 $name = "Home";
+
+
 
 $uri = $_SERVER['REQUEST_URI'];
 

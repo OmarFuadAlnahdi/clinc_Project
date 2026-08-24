@@ -102,7 +102,7 @@
     <div class="container" id="container">
         <div class="form-container sign-in-container">
 
-            <form action="../Controllers/register.php" method = "post">
+            <form action="/register"  method = "post">
 
                 <h1><?= $PageName ?></h1>
 
@@ -123,6 +123,7 @@
                   
 
                 <button type="submit">Sign up</button>
+                
         
         
             </form>

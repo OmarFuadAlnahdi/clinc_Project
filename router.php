@@ -6,8 +6,13 @@
 
 function router($uri,$router)
 {
-
-    return $router[$uri];
+    if (isset($router[$uri])) {
+        return $router[$uri];
+    }
+    else{
+        return "";
+    }
+    
    
 }
    
