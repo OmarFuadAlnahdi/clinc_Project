@@ -17,9 +17,9 @@
 
     body {
 	    background: linear-gradient(135deg,
-        #000000,
-        #0e0e0e,
-        #171717
+        #f1e9e9,
+        #ede8e8,
+        #f9f6f6
   );
 	    display: flex;
 	    justify-content: center;
@@ -39,8 +39,8 @@
     
     button{
         border-radius: 20px;
-        border:1px solid #FF4B2B;
-        background-color: #FF4B2B;
+        border:1px solid #2007d9;
+        background-color: #000000;
         color: #FFFFFF;
         font-size: 12px;
         font-weight: bold;
@@ -57,13 +57,13 @@
         outline:none;
     }
     form{
-        background-color: #000000;
+        background-color: #3829de;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         padding: 0 50px;
-        height:100%;
+        height:100%;x: ;
         text-align: center;
     }
     input{

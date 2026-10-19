@@ -14,6 +14,8 @@ public function __construct()
     $dbname = "Hospital";
     $username = "root";
     $password = "Aa133133";
+    
+   
 
 try {
     $this->pdo = new PDO (
@@ -45,6 +47,13 @@ public function getTable($tablename)
     $result->execute();
     return $result->fetchAll(PDO::FETCH_ASSOC);
 }
+public function getrow($tableName,$id)
+{
+    $result =  $this->pdo->prepare("SELECT " . $id . " FROM " . $tableName);
+    $result->execute();
+    return $result->fetch(PDO::FETCH_ASSOC);
+}
+
 
 
 }

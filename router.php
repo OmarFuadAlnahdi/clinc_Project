@@ -1,20 +1,19 @@
 <?php
 
 
-
+function ShowStatusCode($statuscode = 404)
+{
+    return "Views/StatusCodes/" . $statuscode . ".php";
+}
 
 
 function router($uri,$router)
 {
-    if (isset($router[$uri])) {
+    if (isset($uri,$router)) 
         return $router[$uri];
-    }
-    else{
-        return "404.php";
-    }
+    else
+        return ShowStatusCode();
+    
 }
-function ShowStatusCode($statuscode = 404)
-{
-    require "StatusCodes/Views/S" . $statuscode . ".php";
-}
+
    

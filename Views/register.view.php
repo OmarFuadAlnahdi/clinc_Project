@@ -20,9 +20,9 @@
 
     body {
 	    background: linear-gradient(135deg,
-        #000000,
-        #0e0e0e,
-        #171717
+        #e8e8ec,
+        #f2f2f5,
+        #c6c6ca
   );
 	    display: flex;
 	    justify-content: center;
@@ -41,8 +41,8 @@
     }
     button{
         border-radius: 20px;
-        border:1px solid #FF4B2B;
-        background-color: #FF4B2B;
+        border:1px solid #000000;
+        background-color: #010000;
         color: #FFFFFF;
         font-size: 12px;
         font-weight: bold;
@@ -60,7 +60,7 @@
         outline:none;
     }
     form{
-        background-color: #000000;
+        background-color: #0f4fda;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -92,19 +92,20 @@
         height: 100%;
     }
     p{
-        color: #FF4B2B;
+        color: #000001;
     }
 
 
 
 </style>
 <body>
+
     <div class="container" id="container">
         <div class="form-container sign-in-container">
 
             <form action="/register"  method = "post">
 
-                <h1><?= $PageName ?></h1>
+                <a href="/"><?= $PageName ?></a>
 
                 <input type="text" name="name" placeholder="name">
                 <input type="email" placeholder="email" name="email">

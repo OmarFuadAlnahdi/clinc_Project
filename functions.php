@@ -1,11 +1,11 @@
 <?php 
 
-function FindValueByid($value,$PK,$FK)
+function FindValueByid($value,$PK,$FKid)
 {
     $result = "Null";
 
     for ($i=0; $i < count($PK); $i++) { 
-        if ($PK[$i]['id'] == $FK) {
+        if ($PK[$i]['id'] == $FKid) {
            $result = $PK[$i][$value];
         }
         
@@ -41,5 +41,18 @@ function isDatafilled($Data)
         }
     }
     return true;
+}
+
+function convertToInt($string){
+
+    return ((int) $string);
+}
+function TimeFormatForHours($hours){
+    
+    return $hours . ':00';
+}
+function TimeFormatForTheMinutes($minutes)
+{
+
 }
 

@@ -68,6 +68,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 
         if (isset($_POST['userid'])) {
+            
             $user_id = $_POST['userid'];
             $ayearsexp = $_POST['addyearsexp'];
             $asummery = $_POST['addsummery'];
@@ -111,7 +112,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 else{
                     $error = "Summry is required!";
                 }
-            }  
+            } 
             else{
                 $error = "the years experince is required!";
             }

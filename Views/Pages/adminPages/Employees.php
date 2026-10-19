@@ -25,8 +25,8 @@ require 'partials/header.php';
 <body>
     
 
-    <a href="../../../index.php">Log out</a>
-    <a href="../../../Controllers/admin/home.php">Admin</a>
+    <a href="/">Log out</a>
+    <a href="/AdminEmployeePage">Admin</a>
 
 
 <table>

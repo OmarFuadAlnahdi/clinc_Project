@@ -16,13 +16,18 @@
 
         <div class="panel">
             <a class="panel-a" href="/" ><?=  $ProjectName ?></a>
+            <hr>
+            <p>manage your employments and schudle with team leader bbbbbbbbb</p>
+            <a class="panel-a2" href="/discoverMore">Discove More</a>
         </div>
+
+
 
         <div class="items">
             <a class="item" href="/">Home</a>
             <a class="item" href="/register">Register</a>
             <a class="item" href="/login">Login</a>
-            <a class="item" href="/login">About us</a>
+            <a class="item" href="/aboutus">About us</a>
 
         </div>
 
@@ -31,6 +36,7 @@
 
     <div class="welcoming-panel">
         <h1>welcome to the <?= $ProjectName ?></h1>
+        <h3>welcome to the Scoppa managment</h3>
     </div>
 
     

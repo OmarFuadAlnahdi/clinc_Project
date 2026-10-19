@@ -34,8 +34,8 @@ require 'partials/header.php';
 <body>
 
     <div class="pages">
-        <h3><a href="../../../index.php">log out</a></h3>
-        <h2><a href="../../../Controllers/admin/home.php">Admin page</a></h2>
+        <h3><a href="/">log out</a></h3>
+        <h2><a href="/adminPage">Admin page</a></h2>
     </div>
 
 
@@ -87,7 +87,7 @@ require 'partials/header.php';
                 
                 
             <div class ="form">
-                <form method="post">
+                <form method="post" action="">
 
                     <h1>Add new doctors</h1>
 
@@ -123,7 +123,7 @@ require 'partials/header.php';
 
                 </form>
             </div>
-            <button id="showandhide">Show edit</button>
+            
             <div class ="form">
                     <form id="form" style="display: none;" method="post">
 
