@@ -44,6 +44,35 @@
     .item:hover{
         color: #b2aeaef7;
     }
+    .side-navbar{
+       
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 10px;
+        gap: 25px;
+        border:1px solid #000000f7;
+        margin-top: 10px;
+        padding: 10px 20px 450px 20px ;
+        border-radius: 10px;
+        background-color: #323335f7;
+    }
+    .Dashbord-text{
+        color: #eff0f4f7;
+    }
+    .Sidebar-item{
+        text-decoration: none;
+        color: #fffafa;
+        border: 1px solid black;
+        padding: 8px 15px;
+        border-radius: 15px;
+        background-color: black;
+        
+       
+
+    }
+    
 
     
 </style>
