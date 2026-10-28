@@ -22,9 +22,11 @@ $name = "Home";
 
 
 
+
+
+
+
 $uri = $_SERVER['REQUEST_URI'];
-
-
 require router($uri,$router);
 
 

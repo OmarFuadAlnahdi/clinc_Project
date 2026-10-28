@@ -10,9 +10,43 @@ $db = new database();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") 
 {
-
+    
     $stmt = $db->query("SELECT * FROM users WHERE email = :email");
     $stmt->execute([
         ':email' => $_POST['email']
