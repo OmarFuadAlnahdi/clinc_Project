@@ -18,6 +18,9 @@ body{
     
     
 }
+.test{
+    color: aliceblue;
+}
 .panel{
     display: grid;
     justify-content: flex-start;

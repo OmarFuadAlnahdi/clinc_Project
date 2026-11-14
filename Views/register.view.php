@@ -111,6 +111,8 @@
                 <input type="email" placeholder="email" name="email">
                 <input type="password" placeholder="password" name="pass">
                 <input type="password" placeholder="check password" name="Repass">
+                <input name="type_request" value="register" >
+
 
                 <?php 
                         if (!(isEmpty($error))) {

@@ -2,6 +2,9 @@
 require 'database.php';
 require 'functions.php';
 require 'router.php';
+require 'Data_Validation.php';
+require 'authin.php';
+
 
 
 $router = [
@@ -22,12 +25,22 @@ $name = "Home";
 
 
 
+$DV = new DataValidation();
+
+$Obj_email = $DV->password("Aa133133");
+echo $Obj_email[0];
+echo $Obj_email[1];
+echo $Obj_email[2];
 
 
 
 
-$uri = $_SERVER['REQUEST_URI'];
-require router($uri,$router);
+
+
+
+
+// $uri = $_SERVER['REQUEST_URI'];
+// require router($uri,$router);
 
 
 

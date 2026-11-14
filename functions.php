@@ -53,6 +53,6 @@ function TimeFormatForHours($hours){
 }
 function TimeFormatForTheMinutes($minutes)
 {
-
+    
 }
 

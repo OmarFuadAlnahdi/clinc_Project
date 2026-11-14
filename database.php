@@ -4,6 +4,7 @@ class database {
 
 
 private $pdo;
+private $date;
  
 
 
@@ -23,6 +24,7 @@ try {
         $username,
         $password
     );
+    $date = new DateTime();
 
 
     $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -36,7 +38,7 @@ try {
 
 }
 
-public function query($query)
+private function query($query)
 {
     return $this->pdo->prepare($query);
 
@@ -52,6 +54,23 @@ public function getrow($tableName,$id)
     $result =  $this->pdo->prepare("SELECT " . $id . " FROM " . $tableName);
     $result->execute();
     return $result->fetch(PDO::FETCH_ASSOC);
+}
+public function addUser($user) {
+    
+    $stmt = $this->query("INSERT INTO users (name,reg_date,email,password) 
+    VALUES (:name,:reg_date, :email, :password)");
+
+    $stmt->execute([
+        ':name' => $user['name'],
+        ':reg_date' => date("y-m-d"),
+        ':email' => $user['email'],
+        'password' => $user['password']
+    ]);
+
+    
+
+
+
 }
 
 
