@@ -71,8 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'post' && $typerequest == "register") {
     $authin->Check_Email_exist($email);
 
     if ($Result) {
-    $RegisterErrors = "Email is exist!";
-    
+        $RegisterErrors = "Email is exist!";
     }
 
     
