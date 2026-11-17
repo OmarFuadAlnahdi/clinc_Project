@@ -27,10 +27,17 @@ $name = "Home";
 
 $DV = new DataValidation();
 
-$Obj_email = $DV->password("Aa133133");
-echo $Obj_email[0];
-echo $Obj_email[1];
-echo $Obj_email[2];
+$Obj_email = $DV->email("");
+
+?>
+<h1><?=  $Obj_email[1];  ?></h1>
+<hr>
+<h1><?=  $Obj_email[2];  ?></h1>
+
+<?php
+
+
+
 
 
 

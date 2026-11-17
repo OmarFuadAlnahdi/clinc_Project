@@ -1,10 +1,13 @@
 <?php
 class DataValidation {
-    
-    
-    private function isLong($name){
 
-        if (strlen($name) > 15) {
+   
+    
+    
+    
+    private function isLong($name,$max){
+
+        if (strlen($name) > $max) {
             return true;
         }
         return false;
@@ -39,24 +42,22 @@ class DataValidation {
         return false;
         
     }
-    private function isEmail($email)
+    private function checkIfEmailExist($email)
     {
-        $email_ARR = [false,"empty",$email];
+        $db = new database();
 
-        $this->convertToLowerCase($email_ARR[2]);
+        $users = $db->getTable("users");
 
-        if(!($this->IsEmailEnding($email))){
-            $email_ARR[1] = "unvalid";
+        for ($i=0; $i < count($users); $i++) { 
+            if ($users[$i]['email'] == $email) {
+                return true;
+            }
         }
 
-        // if (!($this->IsEmailExist($email))){
-            
-        // }
+        return false;
 
-
-
-        return $email_ARR;
     }
+  
     private function HasAtSign($email){
         
         for ($i=0; $i <strlen($email) ; $i++) { 
@@ -68,6 +69,7 @@ class DataValidation {
 
         return false;
     }
+   
 
 
 
@@ -82,7 +84,7 @@ class DataValidation {
             $Oname[1] = "empty";
             return $Oname;
         }
-        if ($this->isLong($name)) {
+        if ($this->isLong($name,15)) {
             $Oname[1] = "long";
             return $Oname;
         }
@@ -94,6 +96,7 @@ class DataValidation {
             $Oname[1] = "number";
             return $Oname;
         }
+        
 
         $Oname[0] = true ; 
         return $Oname;
@@ -109,17 +112,31 @@ class DataValidation {
        $arrEmail[2] = $email;
 
 
-        if ($this->isEmail($email)) {
-            $arrEmail[1] = "domain";
-            return $arrEmail;
+        if (empty($email)) {
+            return $arrEmail;            
         }
         if (!($this->HasAtSign($email))) {
             $arrEmail[1] = "Email";
             return $arrEmail;
         }
-        if ($this->checkIfEmailExist($email)) {
-            
+        if ($this->checkIfEmailExist($email)){
+            $arrEmail[1] = "exist";
+            return $arrEmail;
+
         }
+        if (!($this->IsEmailEnding($email))) {
+            $arrEmail[1] = "domain";
+            return $arrEmail;
+
+        }
+        if ($this->isLong($email,25)) {
+            $arrEmail[1] = "long";
+            return $arrEmail;            
+        }
+       
+        
+        
+
 
 
         $arrEmail[0] = true;

@@ -93,17 +93,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'post' && $typerequest == "register") {
 
     if (!($email)[0]) {
 
-        if ($name[1] == "empty") {
-            $RegisterErrors = "email is requred!";
+        if ($email[1] == "Email") {
+            $RegisterErrors = "It's not an email!";
         }
-        if ($name[1] == "long") {
-            $RegisterErrors = "your name is too long!";
+        if ($email[1] == "long") {
+            $RegisterErrors = "your email is too long!";
         }
-        if ($name[1] == "number") {
-            $RegisterErrors = "your name has a number!";
+        if ($email[1] == "domain") {
+            $RegisterErrors = "the domain is not correct!";
 
-        }if ($name[1] == "syntext") {
-            $RegisterErrors = "your name don't make sense!";
+        }if ($email[1] == "exist") {
+            $RegisterErrors = "the email is aleardy signed in!";
         }
     }
 
