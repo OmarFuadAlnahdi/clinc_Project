@@ -39,6 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == "post" && $typerequest == "") {
 if ($_SERVER['REQUEST_METHOD'] === 'post' && $typerequest == "register") {
 
     echo $typerequest;
+    $Data_Validation_Passed = true;
+
 
     // these methods will return an object with three values (bool,type of error,name or a message);
     $name = $DV->name($REQName); 
@@ -64,11 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'post' && $typerequest == "register") {
     }
 
     // these methods will return an object with two values (bool,name or a message);
-    $Result = $authin->checkEmailExist($email);
     $SamePass = Samepass($password,$passwordSEC);
 
 
-    $authin->Check_Email_exist($email);
+    
 
     if ($Result) {
         $RegisterErrors = "Email is exist!";
@@ -104,17 +105,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'post' && $typerequest == "register") {
 
         }if ($email[1] == "exist") {
             $RegisterErrors = "the email is aleardy signed in!";
+           
+        }
+        if ($email[1] == "Empty") {
+            $RegisterErrors = "you should fill the email text box first!";
         }
     }
+    if (!($email[0])) {
+        $Data_Validation_Passed = false;
+        header("Location:/register");
 
-
-
-
-
-    if (!($SamePass)) {
-        $RegisterErrors = "inccorect password!"; 
     }
-    elseif ($SamePass) {
+
+
+
+
+
+    if (!($SamePass && $Data_Validation_Passed)) {
+        $RegisterErrors = "inccorect password!"; 
+        $Data_Validation_Passed = false;
+        header("Location:/register");
+
+    }
+
+    elseif ($SamePass && $Data_Validation_Passed) {
         $user = [
         'name' => $name[2],
         'email' => $email,

@@ -144,6 +144,23 @@ class DataValidation {
         return $arrEmail;
 
     }
+
+    private function setLimits($value)
+    {   
+        if (strlen($value) < 8) 
+            return "short";
+        
+        if (strlen($value) > 16) 
+            return "long";
+        
+        
+    }
+
+    public function checkPassword($userPassword,&$errorMessage)
+    {
+        
+        
+    }
     
 
     
